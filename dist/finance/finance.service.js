@@ -12,7 +12,7 @@ let FinanceService = class FinanceService {
     compound(dto) {
         const { principal, rate, n, t } = dto;
         return {
-            amount: principal * ((1 + rate / n) ** (n * t)),
+            amount: principal * (1 + rate / n) ** (n * t),
         };
     }
 };
